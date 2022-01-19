@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+
+:root{
+    --primary : #FF6F91;
+    --light : #ffffff;
+    --dark : #3a3a3a;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+/*.box{*/
+/*    display: flex;*/
+/*    height: 100vh;*/
+/*    justify-content: space-between;*/
+/*    align-items: center;*/
+/*    width: 80%;*/
+/*    margin: auto;*/
+/*}*/
+/*body{*/
+/*    background-color: var(--dark);*/
+/*}*/
+.map{
+    height: 80vh;
+}
+.map svg{
+    height: 100%;
+    position: relative;
+    filter: drop-shadow(3px 3px 5px #3a3a3a);
+    stroke-opacity: 1;
+    animation: mapAnimation 1s;
+}
+.map svg path:hover{
+    fill: brown;
+    transition: 0.5s;
+}
+
+.info-description{
+    font-size: 20px;
+    margin: 20px 0;
+    /* padding-right:  50px; */
+    color: #ffffff;
+}
+
+.info{
+    width: 50%;
+}
+.map path{
+    fill: var(--primary);
+    transition: 0.5s;
+    position: absolute;
+}
+.map path.active{
+    fill: var(--light) !important;
+}
+.info-title{
+    font-size: 3em;
+    margin-bottom: 30px;
+    /*color: var(--light);*/
+    animation: textAnimation 1s;
+}
+.info-place{
+    font-size: 1.5em;
+    /*color: var(--light);*/
+    animation: textAnimation 1s;
+}
+.currentPlace{
+    color: var(--primary);
+    font-weight: bolder;
+}
+@media screen and (max-width: 900px){
+    .container{
+        width: 90%;
+        margin: auto;
+        align-items: center;
+        align-content: space-around;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .title{
+        font-size: 2em;
+        margin-bottom: 15px;
+    }
+    .location{
+        font-size: 1em;
+    }
+
+}
+
+@keyframes mapAnimation {
+    0%{
+        transform: translateY(50px);
+        stroke-opacity: 0.2;
+        shape-margin: 10px;
+        opacity: 0.1;
+    }
+    50%{
+        stroke-opacity: 0.5;
+        opacity: 0.5;
+    }
+    100%{
+        stroke-opacity: 1;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes textAnimation {
+    from{
+        transform: translateY(-50px);
+        opacity: 0.1;
+    } to{
+
+          transform: translateY(0);
+          opacity: 1;
+
+      }
+}

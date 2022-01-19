@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Padauk:wght@400;700&display=swap');
+
+*{
+    font-family: 'Montserrat', 'Padauk', sans-serif;
+}
+
+
+.brand-logo{
+    filter: drop-shadow(0px 3px 0 #00000030);
+}
+
+.bg-body{
+    background: #fefefe !important;
+}
+
+.sidebar-spacer{
+    height: 20px;
+}
+
+.sidebar-group-title{
+
+}
+
+.sidebar ul{
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li{
+}
+
+.sidebar-group-title{
+    margin: 0;
+    padding:10px;
+    font-weight: bold;
+}
+
+.sidebar-link:hover{
+    background: #0D6EFD35;
+}
+
+.sidebar-link {
+    padding: 10px;
+    display: block;
+    border-radius: 0.25rem;
+    text-decoration: none;
+}
+
+.sidebar-link.active{
+    background: #0D6EFD35;
+    color: var(--bs-primary);
+}
+
+.sidebar-link-icon{
+    margin-right: 10px;
+}
+
+.the{
+    text-align: center;
+}
+
